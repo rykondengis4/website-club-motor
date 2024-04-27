@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 'sidebar main main';
+  grid-template-columns: 1fr 6fr;
+}
+
+/* sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.sidebar .bordericon {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border-radius: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.logo.gambar {
+  width: 70px;
+  height: 70px;
+  background-image: url(img/profile.png);
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.icon {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.icon.ver {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon.hor {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweeter {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  background-image: url(assets/img/twitter.png);
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.instagram {
+  width: 25px;
+  height: 25px;
+  background-image: url(assets/img/instagram.png);
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.facebook {
+  width: 25px;
+  height: 25px;
+  background-image: url(assets/img/facebook.png);
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.linkedin {
+  order: 1;
+  width: 25px;
+  height: 25px;
+  background-image: url(assets/img/linkedin.png);
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logo.club {
+  margin-top: 10px;
+  size: 40%;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  align-content: center;
+  justify-content: center;
+}
+
+.logo.club img {
+  width: 40%;
+}
+
+.menu-list ul {
+  margin-top: 40px;
+  list-style: none;
+  line-height: 2;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.menu-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar .login {
+  margin-left: 25px;
+}
+
+.sidebar .login {
+  display: block;
+}
+
+.menu-list a:hover {
+  text-decoration: underline;
+}
+
+/* main */
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns:
+    'header header header'
+    'profile profile profile';
+}
+
+.header {
+  grid-area: header;
+  grid-row-start: 2;
+}
+
+.profile {
+  grid-area: profile;
+}

@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Montserrat';
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: #ddd;
+  color: black;
+  height: 60px;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h4 {
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  font-size: 1rem;
+  justify-content: space-between;
+}
+
+.logoutama {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  color: black;
+  text-decoration: none;
+}
+
+.logo.gambar {
+  width: 50px;
+  height: 50px;
+  background-image: url(img/logo_png_50px.png);
+}
+
+nav ul a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  text-decoration: underline;
+}
+
+/* hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  top: -5px;
+  left: -1px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: black;
+  transition: all 0.3s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 2px;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* container */
+.container {
+  position: relative;
+  top: 60px;
+}
+
+header .heading {
+  text-transform: capitalize;
+  padding: 40px;
+}
+
+/* logo klien */
+img {
+  width: 100%;
+}
+
+.klien {
+  border: 10px solid white;
+  margin: 20px auto;
+  width: 80%;
+  list-style: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 5px;
+}
+
+.paragraf-utama {
+  padding: 40px;
+}
+
+.paragraf-utama p {
+  text-indent: 3%;
+}
+
+.deskripsiklien {
+  padding: 35px;
+}
+
+/* blackangels */
+.blackangels {
+  display: flex;
+}
+
+.blackangels img {
+  width: 95%;
+}
+
+/* pemudis */
+.pemudis {
+  display: flex;
+}
+
+.pemudis img {
+  width: 92%;
+}
+
+/* bbmc */
+.bbmc {
+  display: flex;
+}
+
+.bbmc img {
+  width: 113%;
+}
+
+.bbmc p {
+  margin-left: 30px;
+}
+
+.bbmc h3 {
+  margin-left: 30px;
+}
+
+/* harley */
+.harley {
+  display: flex;
+}
+
+.harley img {
+  width: 200%;
+}
+
+.harley p {
+  margin-left: 90px;
+}
+
+.harley h3 {
+  margin-left: 90px;
+}
+
+/* maci */
+.maci {
+  display: flex;
+}
+
+.maci img {
+  width: 105%;
+}
+
+.maci p {
+  margin-left: 23px;
+}
+
+.maci h3 {
+  margin-left: 23px;
+}
+
+/* tiger */
+.tiger {
+  display: flex;
+}
+
+.tiger img {
+  width: 55%;
+}
+
+.tiger p {
+  margin-left: -115px;
+}
+
+.tiger h3 {
+  margin-left: -115px;
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 70px;
+  min-height: 500px;
+  background-color: #333;
+  color: white;
+}
+
+footer .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .tentang {
+  width: 80%;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer img {
+  width: 45px;
+}
+
+footer .kontak {
+  min-width: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* responsive */
+/* tablet */
+@media (max-width: 768px) {
+  nav ul {
+    width: 80%;
+    font-size: 0.8em;
+    justify-content: space-evenly;
+  }
+
+  .logo h4 {
+    font-size: 0.6em;
+  }
+
+  .logo.gambar {
+    background-position: center;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+  }
+
+  .logoutama {
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    color: black;
+    text-decoration: none;
+  }
+
+  footer {
+    height: 800px;
+  }
+}
+
+/* mobile */
+@media (max-width: 576px) {
+  .logo h4 {
+    font-size: inherit;
+  }
+
+  .logo.gambar {
+    background-position: center;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+  }
+
+  .logoutama {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 80%;
+    height: 100vh;
+    transform: translateX(100%);
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  nav ul a {
+    color: white;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  footer {
+    height: 1000px;
+  }
+}
